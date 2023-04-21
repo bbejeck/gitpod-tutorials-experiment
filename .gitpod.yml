@@ -12,4 +12,6 @@ tasks:
   - name: Run Docker
     command: |
      docker compose up -d
- 
+  - name: Go to tutorial
+    command: |
+      cd $tutorial
