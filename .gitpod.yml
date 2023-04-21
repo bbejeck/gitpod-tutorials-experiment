@@ -1,0 +1,20 @@
+image: gitpod/workspace-full
+
+github:
+  prebuilds:
+    master: true
+    branches: true
+
+tasks:
+  - name: Setup
+    init:  |
+      curl -L --http1.1 https://cnfl.io/cli | sudo sh -s -- -b /usr/local/bin
+
+  -name: docker-run
+   command: |
+     docker compose up -d
+
+  -name: gradle-wrapper
+   command: |
+     gradle wrapper
+
