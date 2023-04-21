@@ -7,7 +7,7 @@ github:
 
 tasks:
   - name: Setup
-    init:  |
+    before: |
       curl -L --http1.1 https://cnfl.io/cli | sudo sh -s -- -b /usr/local/bin
   -name: docker-run
    command: |
