@@ -12,7 +12,4 @@ tasks:
   - name: Run Docker
     command: |
      docker compose up -d
-  - name: Gradle Wrapper
-    command: |
-     gradle wrapper
-
+ 
