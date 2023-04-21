@@ -6,13 +6,13 @@ github:
     branches: true
 
 tasks:
-  - name: Setup
-    before: |
+  - name: Get-CLI
+    init: |
       curl -L --http1.1 https://cnfl.io/cli | sudo sh -s -- -b /usr/local/bin
-  -name: docker-run
-   command: |
+  - name: Run Docker
+    command: |
      docker compose up -d
-  -name: gradle-wrapper
-   command: |
+  - name: Gradle Wrapper
+    command: |
      gradle wrapper
 
